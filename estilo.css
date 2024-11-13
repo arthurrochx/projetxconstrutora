@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reseta alguns estilos padrões */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* Estilo para o corpo */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+/* Estilo para o header e o contêiner */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/* Estilo para o header */
+.header,
+.rodape {
+  padding: 0;
+  /*position: sticky; */
+  top: 0;
+  box-shadow: 10px 0px 10px #0c0c0c;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.header>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo para o contêiner da imagem de fundo */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilo para a imagem de fundo */
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/background-home.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  z-index: -1;
+  /* Coloca a imagem atrás do conteúdo */
+  box-shadow: 10px 0px 10px #0c0c0c;
+
+}
+
+/* Estilo pra barra de nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+nav ul a {
+  font-weight: bold;
+  color: black;
+  margin-right: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.menu-item {
+  margin-left: auto;
+}
+
+
+nav .close-menu {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+nav .ul a:not(.btn-contato):hover {
+  border-bottom: 2px solid white;
+}
+
+/* estilização do meu menu mobile responsivo*/
+
+
+.btn-contato {
+  color: rgb(3, 3, 3);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5px 7px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-contato:hover {
+  color: rgb(255, 255, 255);
+  background-color: black;
+  padding: 8px;
+  border: 1.3px solid black;
+}
+
+/* Estilo para a seção principal */
+section.titulo-principal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+}
+
+/* estilização do titulo h1 principal */
+.title {
+  color: black;
+  position: relative;
+  margin: 130px;
+  text-align: center;
+}
+
+.title h1 p {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 3rem;
+}
+
+/*Estilização do botão de contato abaixo do h1*/
+.btn-contato-title.animate-outline {
+  /*chamando a animação*/
+  color: white;
+  animation: animate-outline 1s ease-out infinite;
+  /*chamando a animação*/
+  color: white;
+  background-color: black;
+  padding: 5px 9px;
+  border: 1.2px solid transparent;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-contato-title:hover {
+  font-size: 21px;
+}
+
+/* Animação para o efeito de contorno */
+
+@keyframes animate-outline {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 10, 10, 0.685);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(79, 156, 249, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 156, 249, 0);
+  }
+}
+
+.section-content .container-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*Espaça itens horizontalmente */
+  padding: 2rem 2rem;
+  width: 100%;
+}
+
+
+.section-content .text {
+  width: 50%;
+  padding: 1rem;
+}
+
+.section-content .text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+
+}
+
+.section-content .text p {
+  text-align: justify;
+  word-spacing: 0;
+  margin: 5px 0 10px 0;
+}
+
+.section-content .img {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 450px;
+
+}
+
+div img {
+  border: 0 solid;
+  border-radius: 15px;
+}
+
+
+.section-sobre h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+.section-sobre p {
+  cursor: pointer;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-sobre .missao {
+  text-align: justify;
+}
+
+.section-sobre .visao {
+  text-align: justify;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-sobre .card-item {
+  cursor: pointer;
+  background-color: #d3e6fd;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  width: 350px;
+  transition: .3s;
+}
+
+.section-sobre .card-item img {
+  width: 80px;
+}
+
+.section-sobre .card-item {
+  color: #333;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.section-sobre .card-item:hover {
+  color: white;
+  background-color: #4f9cf9;
+  margin-top: -5px;
+
+}
+
+/* Rodapé compacto */
+.rodape-geral {
+  background-color: #4f9cf9; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  padding: 1rem 0; /* Padding geral */
+  width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+  position: relative;
+  margin-top: 150px; /* Remove qualquer margem extra acima */
+  clear: both; /* Remove margens indesejadas que possam ser criadas pelo conteúdo anterior */
+}
+
+/* Layout do Rodapé */
+.rodape-geral .container {
+  display: flex;
+  justify-content: space-between; /* Espaçamento igual entre as colunas */
+  flex-wrap: wrap; /* Permite que as colunas se movam para baixo em telas pequenas */
+  padding: 0 2%; /* Padding para garantir que as colunas não encostem nas bordas */
+}
+
+
+
+.rodape-geral .row {
+  display: flex;
+  justify-content: space-between; /* Distribui as colunas lado a lado */
+  flex: 1; /* Faz com que as colunas tenham o mesmo tamanho */
+  margin: 0;
+  width: 100%;
+}
+
+.rodape-geral .col-md-4 {
+  flex: 1; /* Garante que todas as colunas tenham o mesmo tamanho */
+  padding: 0 10px; /* Espaçamento entre as colunas */
+  margin-bottom: 0.5rem; /* Menos espaço abaixo das colunas */
+}
+
+.rodape-geral h5 {
+  font-size: 0.875rem; /* Tamanho do título menor */
+  margin-bottom: 0.5rem; /* Menos espaço abaixo do título */
+}
+
+.rodape-geral p,
+.rodape-geral a {
+  font-size: 0.75rem; /* Tamanho da fonte reduzido */
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove underline dos links */
+}
+
+.rodape-geral .lista-sem-estilo {
+  list-style: none; /* Remove bullets da lista */
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.rodape-geral .lista-sem-estilo li a {
+  color: white; /* Cor dos links */
+  text-decoration: none; /* Remove underline dos links */
+  display: block; /* Faz o link ocupar toda a largura do elemento */
+  padding: 0.25rem 0; /* Espaçamento menor dentro do link */
+}
+
+.rodape-geral .lista-sem-estilo li a:hover {
+  color: #0d0d0e; /* Cor ao passar o mouse sobre os links */
+}
+
+.rodape-geral .col-md-4 i {
+  margin-right: 0.25rem; /* Menos espaço entre o ícone e o texto */
+}
+
+/* Conexões Sociais */
+.rodape-geral .icones-sociais {
+  display: flex; /* Flexbox para alinhar os ícones */
+  justify-content: flex-start; /* Alinhar os ícones à esquerda */
+}
+
+.rodape-geral .icones-sociais a {
+  font-size: 1rem; /* Ícones menores */
+  margin-right: 0.5rem; /* Menos espaço entre os ícones */
+  transition: transform 0.3s; /* Transições de efeito */
+}
+
+.rodape-geral .icones-sociais a:hover {
+  transform: translateY(-2px); /* Efeito de elevação ao passar o mouse (menor) */
+}
+
+/* Direitos Autorais */
+.rodape-geral .direitos-autorais {
+  width: 100%; /* Garante que o copyright ocupe toda a largura */
+  text-align: center; /* Alinha o texto ao centro */
+  font-size: 0.625rem; /* Tamanho bem pequeno para o texto de copyright */
+  color: #aaa; /* Cor mais clara para copyright */
+  margin-top: 1rem; /* Dá um pequeno espaçamento antes do texto */
+  padding: 1rem 0; /* Padding para separar mais do conteúdo anterior */
+  background-color: #333; /* Cor de fundo para a seção de direitos autorais */
+  color: white; /* Cor do texto dos direitos autorais */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .rodape-geral .container {
+    flex-direction: column; /* Colunas empilhadas em telas pequenas */
+  }
+
+  .rodape-geral .col-md-4 {
+    flex: none; /* Remover o flex para que as colunas tenham a largura total */
+    width: 100%; /* Garantir que as colunas ocupem toda a largura */
+    padding: 10px 0; /* Espaçamento entre as colunas */
+  }
+
+  .rodape-geral .direitos-autorais {
+    margin-top: 1rem; /* Garante que o texto de direitos autorais tenha espaço na versão mobile */
+  }
+}
+
+
+
+
+
+.close-menu {
+  display: none;
+}
+
+.menu-item {
+  display: none;
+}
+
+@media(max-width: 830px) {
+
+  /* menu mobile*/
+  .ul {
+    display: none;
+    /* Oculta a lista */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Ocupa toda a tela */
+    background-color: #4f9cf9;
+    /* Mude para a cor desejada */
+    padding-top: 60px;
+    /* Espaço para o ícone de fechar */
+    z-index: 99;
+  }
+
+  .ul.open {
+    display: flex;
+    /* Mostra a lista quando aberta */
+  }
+
+  .menu-item {
+    display: block;
+    position: absolute;
+    /* Para posicionamento correto */
+    top: 46px;
+    /* Ajuste a posição conforme necessário */
+    right: 28px;
+    /* Ajuste a posição conforme necessário */
+    font-size: 20px;
+    cursor: pointer
+  }
+
+  .close-menu {
+    display: block;
+    /* Mostra o ícone de fechar quando o menu está aberto */
+    position: absolute;
+    /* Para posicionamento correto */
+    top: 46px;
+    /* Ajuste a posição conforme necessário */
+    right: 28px;
+    /* Ajuste a posição conforme necessário */
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .ul a {
+    margin: 10px 0;
+    font-size: 20px;
+    /* Tamanho da fonte */
+  }
+
+}
+
+/* Mostre o ícone de fechar quando o menu estiver aberto */
+.open+.close-menu {
+  display: block;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .header,
+  .rodape {
+    padding: 1rem;
+  }
+
+  .titulo-principal h1 {
+    font-size: 2.5rem;
+    /* Tamanho do título em telas menores */
+  }
+
+  .section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-content {
+    flex-direction: column;
+  }
+
+  .text,
+  .img {
+    width: 100%;
+    /* Largura total em telas pequenas */
+    max-width: none;
+    /* Remove limite de largura */
+  }
+
+  .cards {
+    flex-direction: column;
+    /* Coluna para os cards em telas pequenas */
+  }
+}
+
+
+/* responsividade */
+@media (max-width: 480px) {
+  .btn-contato {
+    font-size: 0.8rem;
+    /* Tamanho do botão em telas menores */
+  }
+
+  .card-item {
+    width: 90%;
+    /* Largura total em telas muito pequenas */
+  }
+}
+
+.section-sobre .card-item {
+  width: 300px; /* Limitar o tamanho dos cards */
+  margin: 10px; /* Menor margem para evitar sobrecarga */
+}
+
+@media (max-width: 768px) {
+  .section-sobre .card-item {
+      width: 80%; /* Largura mais responsiva em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-sobre .card-item {
+      width: 100%; /* Em telas muito pequenas, ocupar toda a largura */
+  }
+}
+
